@@ -3,7 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './datepicker-component';
 import Auto from './datetime-component';
 import Combo from './calendar-component';
-
+import DateRange from './daterangepicker-component';
+import Sidebar from './sidebar-component';
 
 const Main = () => (
   <main>
@@ -11,6 +12,8 @@ const Main = () => (
       <Route exact path='/' component={Home}/>
       <Route path='/datetime-component' component={Auto}/>
       <Route path='/calendar-component' component={Combo}/>
+      <Route path='/daterangepicker-component' component={DateRange}/>
+      <Route path='/sidebar-component' component={Sidebar}/>
     </Switch>
   </main>
 )

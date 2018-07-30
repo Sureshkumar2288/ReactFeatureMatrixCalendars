@@ -1,18 +1,13 @@
-/**
- * AutoComplete Default functionality Sample
- */
-// import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-// import { BrowserRouter, Route, Link } from "react-router-dom";
 import { CheckBoxComponent, ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
+import { DateRangePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { SampleBase } from './sample-base';
-// import { PropertyPane } from './property-pane';
 
-class Home extends SampleBase<{}, {}> {
 
-  public dateInstance: DatePickerComponent;
+class Auto extends SampleBase<{}, {}> {
+
+  public dateTimeInstance: DateRangePickerComponent;
   public float: string[] = ['Auto', 'Never', 'Always'];
   public format: string[] = ['dd/MM/yyyy', 'MM/dd/yy', 'MMMM-dd-yyyy'];
   public start: string[] = ['Month', 'Year', 'Decade'];
@@ -29,7 +24,6 @@ class Home extends SampleBase<{}, {}> {
     this.strictMode = this.strictMode.bind(this);
     this.showClearButton = this.showClearButton.bind(this);
     this.enableWeekNumber = this.enableWeekNumber.bind(this);
-    this.showtodaybutton = this.showtodaybutton.bind(this);
     this.floatChange = this.floatChange.bind(this);
     this.formatChange = this.formatChange.bind(this);
     this.startChange = this.startChange.bind(this);
@@ -47,134 +41,125 @@ class Home extends SampleBase<{}, {}> {
   }
 
   public enablePersistence(args: any) {
-    // debugger;
     if (args.checked) {
-      this.dateInstance.enablePersistence = true;
+      this.dateTimeInstance.enablePersistence = true;
     } else {
-      this.dateInstance.enablePersistence = false;
+      this.dateTimeInstance.enablePersistence = false;
     }
   }
 
   public enableRTL(args: any) {
     if (args.checked) {
-      this.dateInstance.enableRtl = true;
+      this.dateTimeInstance.enableRtl = true;
     } else {
-      this.dateInstance.enableRtl = false;
+      this.dateTimeInstance.enableRtl = false;
     }
   }
 
   public readOnly(args: any) {
     if (args.checked) {
-      this.dateInstance.readonly = true;
+      this.dateTimeInstance.readonly = true;
     } else {
-      this.dateInstance.readonly = false;
+      this.dateTimeInstance.readonly = false;
     }
   }
 
   public enable(args: any) {
     if (args.checked) {
-      this.dateInstance.enabled = true;
+      this.dateTimeInstance.enabled = true;
     } else {
-      this.dateInstance.enabled = false;
+      this.dateTimeInstance.enabled = false;
     }
   }
 
   public strictMode(args: any) {
     if (args.checked) {
-      this.dateInstance.strictMode = true;
+      this.dateTimeInstance.strictMode = true;
     } else {
-      this.dateInstance.strictMode = false;
+      this.dateTimeInstance.strictMode = false;
     }
   }
   public showClearButton(args: any) {
     if (args.checked) {
-      this.dateInstance.showClearButton = true;
+      this.dateTimeInstance.showClearButton = true;
     } else {
-      this.dateInstance.showClearButton = false;
+      this.dateTimeInstance.showClearButton = false;
     }
   }
 
   public enableWeekNumber(args: any) {
     if (args.checked) {
-      this.dateInstance.weekNumber = true;
+      this.dateTimeInstance.weekNumber = true;
     } else {
-      this.dateInstance.weekNumber = false;
-    }
-  }
-
-  public showtodaybutton(args: any) {
-    if (args.checked) {
-      this.dateInstance.showTodayButton = true;
-    } else {
-      this.dateInstance.showTodayButton = false;
+      this.dateTimeInstance.weekNumber = false;
     }
   }
 
   public floatChange(args: any) {
-    this.dateInstance.floatLabelType = args.value;
+    this.dateTimeInstance.floatLabelType = args.value;
   }
 
   public formatChange(args: any) {
-    this.dateInstance.format = args.value;
+    this.dateTimeInstance.format = args.value;
   }
 
   public startChange(args: any) {
-    this.dateInstance.start = args.value;
+    this.dateTimeInstance.start = args.value;
   }
 
   public depthChange(args: any) {
-    this.dateInstance.depth = args.value;
+    this.dateTimeInstance.depth = args.value;
   }
 
   public onPlaceHolderFocusout(args: any) {
     if (args.target.value) {
-      this.dateInstance.placeholder = args.target.value;
+      this.dateTimeInstance.placeholder = args.target.value;
     } else {
-      this.dateInstance.placeholder = '';
+      this.dateTimeInstance.placeholder = '';
     }
   }
 
   public onMaxFocusout(args: any) {
-    this.dateInstance.max = args.target.value;
+    this.dateTimeInstance.max = args.target.value;
   }
 
   public onMinFocusout(args: any) {
-    this.dateInstance.min = args.target.value;
+    this.dateTimeInstance.min = args.target.value;
   }
 
   public onValueFocusout(args: any) {
-    this.dateInstance.value = args.target.value;
+    this.dateTimeInstance.value = args.target.value;
   }
 
   public onFirstFocusout(args: any) {
-    this.dateInstance.firstDayOfWeek = JSON.parse(args.target.value);
+    this.dateTimeInstance.firstDayOfWeek = JSON.parse(args.target.value);
   }
 
   public onNumberFocusout(args: any) {
     if (args.target.value) {
-      this.dateInstance.width = JSON.parse(args.target.value);
+      this.dateTimeInstance.width = JSON.parse(args.target.value);
     } else {
       return;
     }
   }
   public onStringFocusout(args: any) {
     if (args.target.value) {
-      this.dateInstance.width = args.target.value;
+      this.dateTimeInstance.width = args.target.value;
     } else {
       return;
     }
   }
   public onIndexFocusout(args: any) {
     if (args.target.value) {
-      this.dateInstance.zIndex = JSON.parse(args.target.value);
+      this.dateTimeInstance.zIndex = JSON.parse(args.target.value);
     }
   }
 
   public oncssClassFocusout(args: any) {
     if (args.target.value) {
-      this.dateInstance.cssClass = args.target.value;
+      this.dateTimeInstance.cssClass = args.target.value;
     } else {
-      this.dateInstance.cssClass = '';
+      this.dateTimeInstance.cssClass = '';
     }
   }
 
@@ -182,30 +167,30 @@ class Home extends SampleBase<{}, {}> {
 
   public showHide(args: any) {
     if (args.checked) {
-      this.dateInstance.show();
+      this.dateTimeInstance.show();
     } else {
-      this.dateInstance.hide();
+      this.dateTimeInstance.hide();
     }
   }
 
   public onDestroy(args: any) {
-    this.dateInstance.destroy();
+    this.dateTimeInstance.destroy();
   }
 
   public onfocusIn(args: any) {
-    this.dateInstance.focusIn();
+    this.dateTimeInstance.focusIn();
   }
 
   public onBlur(args: any) {
-    this.dateInstance.focusOut();
+    this.dateTimeInstance.focusOut();
   }
 
   public GetPesistData(args: any) {
-    console.log(this.dateInstance.getPersistData());
+    console.log(this.dateTimeInstance.getPersistData());
   }
 
   public GetView(args: any) {
-    console.log(this.dateInstance.currentView());
+    console.log(this.dateTimeInstance.currentView());
   }
 
   public onClose(args: any) {
@@ -232,11 +217,14 @@ class Home extends SampleBase<{}, {}> {
     console.log('Blur triggred');
     console.log(args);
   }
+  public onNavigated(args: any) {
+    console.log('select triggred');
+    console.log(args);
+  }
   public onFocus(args: any) {
     console.log('Focus triggred');
     console.log(args);
   }
-
   render() {
 
 
@@ -244,10 +232,11 @@ class Home extends SampleBase<{}, {}> {
       <div id='combodefault' className='control-pane'>
         <div className='content-wrapper'>
           <div className='contents'>
-            <label> DatePicker feature matrix sample </label>
-            <DatePickerComponent id='datepicker' ref={ele => this.dateInstance = ele!} change={this.onChange.bind(this)}
-            blur={this.onComponentBlur.bind(this)} open={this.onOpen.bind(this)} destroyed={this.onComponentDestroy.bind(this)}
-            created={this.onCreated.bind(this)} focus={this.onFocus.bind(this)} close={this.onClose.bind(this)}/>
+            <label> DateTimePicker </label>
+            <DateRangePickerComponent id='datetimepicker' ref={ele => this.dateTimeInstance = ele!} change={this.onChange.bind(this)}
+              blur={this.onComponentBlur.bind(this)} open={this.onOpen.bind(this)} destroyed={this.onComponentDestroy.bind(this)}
+              created={this.onCreated.bind(this)} select={this.onNavigated.bind(this)}
+              focus={this.onFocus.bind(this)} close={this.onClose.bind(this)} />
           </div>
         </div>
         <div className='contents1'>
@@ -316,12 +305,6 @@ class Home extends SampleBase<{}, {}> {
       </div>
           <div className='span3'>
             <CheckBoxComponent change={this.enableWeekNumber} />
-          </div>
-          <div className='span3'>
-            Today Button
-      </div>
-          <div className='span3'>
-            <CheckBoxComponent change={this.showtodaybutton} checked={true} />
           </div>
           <div className='span3'>
             Depth
@@ -461,8 +444,10 @@ class Home extends SampleBase<{}, {}> {
           </div>
 
         </div >
+
       </div>
     );
   }
 }
-export default Home;
+
+export default Auto;

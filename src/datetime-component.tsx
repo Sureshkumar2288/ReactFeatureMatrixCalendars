@@ -201,6 +201,36 @@ class Auto extends SampleBase<{}, {}> {
   public GetView(args: any) {
     console.log(this.dateTimeInstance.currentView());
   }
+
+  public onClose(args: any) {
+    console.log('Close triggred');
+    console.log(args);
+  }
+  public onCreated(args: any) {
+    console.log('created triggred');
+    console.log(args);
+  }
+  public onComponentDestroy(args: any) {
+    console.log('destroy triggred');
+    console.log(args);
+  }
+  public onChange(args: any) {
+    console.log('Change triggred');
+    console.log(args);
+  }
+  public onOpen(args: any) {
+    console.log('Open triggred');
+    console.log(args);
+  }
+  public onComponentBlur(args: any) {
+    console.log('Blur triggred');
+    console.log(args);
+  }
+  public onFocus(args: any) {
+    console.log('Focus triggred');
+    console.log(args);
+  }
+
   render() {
 
 
@@ -209,7 +239,9 @@ class Auto extends SampleBase<{}, {}> {
         <div className='content-wrapper'>
           <div className='contents'>
             <label> DateTimePicker </label>
-            <DateTimePickerComponent id='datetimepicker' ref={ele => this.dateTimeInstance = ele!} />
+            <DateTimePickerComponent id='datetimepicker' ref={ele => this.dateTimeInstance = ele!} change={this.onChange.bind(this)}
+              blur={this.onComponentBlur.bind(this)} open={this.onOpen.bind(this)} destroyed={this.onComponentDestroy.bind(this)}
+              created={this.onCreated.bind(this)} focus={this.onFocus.bind(this)} close={this.onClose.bind(this)} />
           </div>
         </div>
         <div className='contents1'>

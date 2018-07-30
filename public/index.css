@@ -95,3 +95,78 @@
     .e-dropdownlist {
         width: 200px;
     }
+
+    .content-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 60px;
+    }
+    .methods{
+        float:left;
+    }
+    #container {
+        width: 100%;
+        height: 60%;
+    }
+
+    .contents {
+        width: 30%;
+        float: left;
+        height: auto;
+    }
+    .align{
+        top:50px;
+        position: absolute;
+    }
+    .contents1 {
+        background-color: whitesmoke;
+        float: right;
+        border-left: 1px solid grey;
+        border-bottom: 1px solid grey;
+        height: auto;
+        padding: 20px 0px 20px 20px;
+
+    }
+
+    .e-checkbox {
+        position: relative !important;
+    }
+
+    .control h3 {
+        text-align: center;
+        padding: 80px 0px 0px 20px;
+    }
+
+    .control b {
+        text-align: center;
+        padding-left: 80px;
+    }
+
+    .span3 {
+        width: 25%;
+        float: left;
+        align-content: center;
+        padding-bottom: 10px;
+    }
+
+    input[type='text'] {
+        width: 140px;
+    }
+
+    #default-sidebar{
+        top:50px;
+        background: blue;
+    }
+
+    .e-dropdownlist {
+        width: 200px;
+    }
+    .navigation {
+        padding-left: 0px;
+        max-height: 340px;
+    }
+    .navigation li {
+        float: left;
+        padding-right: 50px;
+        list-style-type:none;
+    }

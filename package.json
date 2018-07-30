@@ -6,6 +6,7 @@
     "@syncfusion/ej2-react-buttons": "*",
     "@syncfusion/ej2-react-calendars": "^16.1.45",
     "@syncfusion/ej2-react-dropdowns": "^16.1.45",
+    "@syncfusion/ej2-react-navigations": "^16.2.45",
     "@syncfusion/ej2-react-splitbuttons": "*",
     "@types/react-router-dom": "^4.2.7",
     "react": "^16.4.0",
