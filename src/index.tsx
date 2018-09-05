@@ -11,6 +11,7 @@ import Auto from './datetime-component';
 import Combo from './calendar-component';
 import DateRange from './daterangepicker-component';
 import sidebar from './sidebar-component';
+import Time from './timepicker-component';
 
 
 export class Default extends React.Component<{}, {}> {
@@ -20,21 +21,22 @@ export class Default extends React.Component<{}, {}> {
       <BrowserRouter>
         <div >
           <h2>Syncfusion controls</h2>
-          <ul className='navigation'>
-            <li><Link to={'/'}>DatePicker</Link></li>
+          <ul className='navigation nav navbar-nav'>
+            <li className='active'><Link to={'/'}>DatePicker</Link></li>
             <li><Link to={'/datetime-component'}>DateTimePicker</Link></li>
-            <li><Link to={'/combo-component'}>Calendar</Link></li>
+            <li><Link to={'/calendar-component'}>Calendar</Link></li>
             <li><Link to={'/daterangepicker-component'}>DateRangePicker</Link></li>
             <li><Link to={'/sidebar-component'}>Sidebar</Link></li>
+            <li><Link to={'/timepicker-component'}>Time</Link></li>
           </ul>
-          <hr />
 
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/datetime-component' component={Auto} />
-            <Route exact path='/combo-component' component={Combo} />
+            <Route exact path='/calendar-component' component={Combo} />
             <Route exact path='/daterangepicker-component' component={DateRange} />
             <Route exact path='/sidebar-component' component={sidebar} />
+            <Route exact path='/timepicker-component' component={Time} />
           </Switch>
         </div>
       </BrowserRouter>

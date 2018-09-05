@@ -42,7 +42,6 @@
     .content-wrapper {
         width: 100%;
         margin: 0 auto;
-        padding-top: 60px;
     }
 
     #container {
@@ -70,12 +69,19 @@
     .e-checkbox {
         position: relative !important;
     }
+    .control-pane{
+        margin-top: 70px;
+    }
 
     .control h3 {
         text-align: center;
         padding: 80px 0px 0px 20px;
     }
 
+    .navigation li{
+        background-color: #f8f8f8;
+        border-color: #e7e7e7;
+    }
     .control b {
         text-align: center;
         padding-left: 80px;
@@ -94,13 +100,7 @@
 
     .e-dropdownlist {
         width: 200px;
-    }
-
-    .content-wrapper {
-        width: 100%;
-        margin: 0 auto;
-        padding-top: 60px;
-    }
+    }    
     .methods{
         float:left;
     }
@@ -164,6 +164,7 @@
     .navigation {
         padding-left: 0px;
         max-height: 340px;
+        height: 15px;
     }
     .navigation li {
         float: left;
